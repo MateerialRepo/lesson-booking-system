@@ -1,4 +1,4 @@
-
+package com.main;
 
 import java.util.List;
 
@@ -29,7 +29,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "com.main.Student{" +
                 "stdName='" + stdName + '\'' +
                 ", lessonBookings=" + lessonBookings +
                 '}';
