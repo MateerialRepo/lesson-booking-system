@@ -29,7 +29,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "com.main.Student{" +
+        return "Student{" +
                 "stdName='" + stdName + '\'' +
                 ", lessonBookings=" + lessonBookings +
                 '}';
