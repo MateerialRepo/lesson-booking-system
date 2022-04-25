@@ -11,11 +11,11 @@ public class Main {
    //Map<String, String> map = new HashMap<>();
 
    //Initialize Lessons
-   Exercise yoga = new Exercise("YOGA", 200,0);
-   Exercise dance = new Exercise("DANCE", 250,0);
-   Exercise zumba = new Exercise("ZUMBA", 300,0);
-   Exercise boxFit = new Exercise("BOX FIT", 100,0);
-   Exercise bodyBlitz = new Exercise("BODY BLITZ", 200,0);
+   Exercise yoga = new Exercise("YOGA", 200);
+   Exercise dance = new Exercise("DANCE", 250);
+   Exercise zumba = new Exercise("ZUMBA", 300);
+   Exercise boxFit = new Exercise("BOX FIT", 100);
+   Exercise bodyBlitz = new Exercise("BODY BLITZ", 200);
 
    //Initialize days
    ExerciseDay saturday = ExerciseDay.SATURDAY;
@@ -27,7 +27,9 @@ public class Main {
    ExerciseSession evening = ExerciseSession.EVENING;
 
    //create Exercise modules
-   ExerciseModule week1 = new ExerciseModule()
+   ExerciseModule week1SatYoga = new ExerciseModule(yoga, saturday, morning );
+   ExerciseModule week1SunYoga = new ExerciseModule(yoga, sunday, morning );
+
 
    public static void main(String[] args){
 

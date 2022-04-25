@@ -30,7 +30,7 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "stdName='" + stdName + '\'' +
-                ", lessonBookings=" + lessonBookings +
+                ", ExerciseBookings=" + bookings +
                 '}';
     }
 
