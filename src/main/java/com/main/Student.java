@@ -4,11 +4,10 @@ import java.util.List;
 
 public class Student {
     private String stdName;
-    private List<String> lessonBookings;
+    private List<Booking> bookings;
 
     public Student(String stdName, List<String> lessonBookings){
         this.stdName = stdName;
-        this.lessonBookings = lessonBookings;
     }
 
     public void setLessonBookings(List<String> lessonBookings) {

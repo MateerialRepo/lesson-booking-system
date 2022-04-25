@@ -2,16 +2,18 @@ package com.main;
 
 import java.util.List;
 
-public class ExerciseClass {
+public class Exercise {
     private String exerciseName;
     private float exercisePrice;
     private List<String> exerciseReviews;
+    private int studentRegistered;
     private final int max_no_of_student = 4;
 
 
-    public ExerciseClass(String exerciseName, float exercisePrice) {
+    public Exercise(String exerciseName, float exercisePrice, int studentRegistered) {
         this.exerciseName = exerciseName;
         this.exercisePrice = exercisePrice;
+        this.studentRegistered = studentRegistered;
     }
 
     public String getExerciseName() {
