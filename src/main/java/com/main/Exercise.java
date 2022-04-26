@@ -7,12 +7,14 @@ public class Exercise {
     private float exercisePrice;
     private List<String> exerciseReviews;
     private List<Integer> exerciseRatings;
-    private int studentRegistered = 0;
+    private int studentAttended = 0;
 
 
-    public Exercise(String exerciseName, float exercisePrice) {
+    public Exercise(String exerciseName, float exercisePrice, List<String> exerciseReviews, List<Integer> exerciseRatings) {
         this.exerciseName = exerciseName;
         this.exercisePrice = exercisePrice;
+        this.exerciseReviews = exerciseReviews;
+        this.exerciseRatings = exerciseRatings;
     }
 
     public String getExerciseName() {
@@ -31,12 +33,13 @@ public class Exercise {
         this.exercisePrice = exercisePrice;
     }
 
-    public void registerStudent(){
-        studentRegistered++;
+    //attend exercise and show no of students that attended exercise
+    public void attendExercise(){
+        studentAttended++;
     }
 
-    public int getNumberOfRegisteredStudents(){
-        return studentRegistered;
+    public int getNumberOfStudentsThatAttended(){
+        return studentAttended;
     }
 
 
@@ -46,7 +49,7 @@ public class Exercise {
     }
 
     public List<String> getExerciseReviews() {
-       return this.exerciseReviews = exerciseReviews;
+       return exerciseReviews;
     }
 
     //adding and getting lesson rating
@@ -57,7 +60,7 @@ public class Exercise {
 
     public List<Integer> getExerciseRatings() {
 
-       return this.exerciseRatings = exerciseRatings;
+       return exerciseRatings;
     }
 
     @Override
@@ -67,7 +70,7 @@ public class Exercise {
                 ", exercisePrice=" + exercisePrice +
                 ", exerciseReviews=" + exerciseReviews +
                 ", exerciseRatings=" + exerciseRatings +
-                ", studentRegistered=" + studentRegistered +
+                ", studentRegistered=" + studentAttended +
                 '}';
     }
 }

@@ -1,5 +1,6 @@
 package com.main;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -11,11 +12,11 @@ public class Main {
    //Map<String, String> map = new HashMap<>();
 
    //Initialize Lessons
-   Exercise yoga = new Exercise("YOGA", 200);
-   Exercise dance = new Exercise("DANCE", 250);
-   Exercise zumba = new Exercise("ZUMBA", 300);
-   Exercise boxFit = new Exercise("BOX FIT", 100);
-   Exercise bodyBlitz = new Exercise("BODY BLITZ", 200);
+   Exercise yoga = new Exercise("YOGA", 200, new ArrayList(), new ArrayList());
+   Exercise dance = new Exercise("DANCE", 250, new ArrayList(), new ArrayList());
+   Exercise zumba = new Exercise("ZUMBA", 300, new ArrayList(), new ArrayList());
+   Exercise boxFit = new Exercise("BOX FIT", 100, new ArrayList(), new ArrayList());
+   Exercise bodyBlitz = new Exercise("BODY BLITZ", 150, new ArrayList(), new ArrayList());
 
    //Initialize days
    ExerciseDay saturday = ExerciseDay.SATURDAY;
