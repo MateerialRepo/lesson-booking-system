@@ -65,12 +65,10 @@ public class Exercise {
 
     @Override
     public String toString() {
-        return "Exercise{" +
-                "exerciseName='" + exerciseName + '\'' +
+        return "exerciseName='" + exerciseName + '\'' +
                 ", exercisePrice=" + exercisePrice +
                 ", exerciseReviews=" + exerciseReviews +
                 ", exerciseRatings=" + exerciseRatings +
-                ", studentRegistered=" + studentAttended +
-                '}';
+                ", studentRegistered=" + studentAttended;
     }
 }
