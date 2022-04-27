@@ -6,6 +6,10 @@ public class Booking {
     List<Exercise> exerciseList = new ArrayList();
     List<ExerciseCalendar> timeTable = new ArrayList();
     List<Student> studentList = new ArrayList();
+    List<String> reviewList = new ArrayList();
+
+
+
     //Initialize days
    ExerciseDay saturday = ExerciseDay.SATURDAY;
    ExerciseDay sunday = ExerciseDay.SUNDAY;
@@ -24,6 +28,8 @@ public class Booking {
 
     public Booking() {
         this.createExercises();
+        this.addExerciseReviews();
+        this.addExerciseRatings();
         this.createTimeTable();
         this.registerStudents();
         this.showMenu();
@@ -38,6 +44,44 @@ public class Booking {
         this.exerciseList.add(bodyBlitz);
         this.exerciseList.add(aquacise);
     }
+
+    public void addExerciseReviews(){
+        reviewList.add("Glad I attended");
+        reviewList.add("Bad class");
+        reviewList.add("Awesome");
+        reviewList.add("Boring class");reviewList.add("Interesting");
+        reviewList.add("Enjoyed myself");reviewList.add("Got injured");
+        reviewList.add("Tutor too fast");reviewList.add("Very Intense");
+        reviewList.add("Burned calories");reviewList.add("Not okay");
+        reviewList.add("Had a swell time");reviewList.add("Good workout");
+        reviewList.add("Loved the atmosphere");reviewList.add("Got a bad back");
+        reviewList.add("Too expensive");reviewList.add("Stole my shoes");
+        reviewList.add("Too shoddy");reviewList.add("Shower was bad");
+        reviewList.add("Smelly locker room ");reviewList.add("Awesome");
+        reviewList.add("Great snacks afterwards ");reviewList.add("Met my soulmate");
+
+
+        for (int i = 0; i < exerciseList.size(); i++) {
+            for (int j = 0; j < 20; j++) {
+                Random random = new Random();
+                int x = random.nextInt(reviewList.size());
+                exerciseList.get(i).addExerciseReview(reviewList.get(x));
+            }
+        }
+
+    }
+
+    public void addExerciseRatings(){
+
+        for (int i = 0; i < exerciseList.size(); i++) {
+            for (int j = 0; j < 20; j++) {
+                Random random = new Random();
+                int x = random.nextInt(5);
+                exerciseList.get(i).addExerciseRating(x);
+            }
+        }
+    }
+
 
 
     //revisit
