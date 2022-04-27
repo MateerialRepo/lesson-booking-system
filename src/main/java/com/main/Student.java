@@ -1,17 +1,16 @@
 package com.main;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Student {
     private String studentName;
-    private ArrayList<Booking> bookings;
+    private ArrayList<ExerciseCalendar> exerciseBookings;
     private ArrayList<Exercise> exercises;
 
 
-    public Student(String studentName, ArrayList<Booking> bookings, ArrayList<Exercise> exercises) {
+    public Student(String studentName, ArrayList<ExerciseCalendar> exerciseBookings, ArrayList<Exercise> exercises) {
         this.studentName = studentName;
-        this.bookings = bookings;
+        this.exerciseBookings = exerciseBookings;
         this.exercises = exercises;
     }
 
@@ -24,16 +23,16 @@ public class Student {
     }
 
     //************ Booking list Operations
-    public ArrayList<Booking> getBookings() {
-        return bookings;
+    public ArrayList<ExerciseCalendar> getExerciseBookings() {
+        return exerciseBookings;
     }
 
-    public void addBooking(Booking b){
-        bookings.add(b);
+    public void addBooking(ExerciseCalendar b){
+        exerciseBookings.add(b);
     }
 
-    public void setBookings(ArrayList<Booking> bookings) {
-        this.bookings = bookings;
+    public void setExerciseBookings(ArrayList<ExerciseCalendar> exerciseBookings) {
+        this.exerciseBookings = exerciseBookings;
     }
 
 
@@ -51,10 +50,10 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "studentName='" + studentName + '\'' +
-                ", bookings=" + bookings +
-                ", exercises=" + exercises +
+        return "{" +
+                "Name: " + studentName + '\'' +
+                ", bookings: " + exerciseBookings +
+                ", exercises enrolled for: " + exercises +
                 '}';
     }
 }

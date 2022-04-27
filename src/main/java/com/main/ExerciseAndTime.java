@@ -27,7 +27,6 @@ public class ExerciseAndTime {
 
     @Override
     public String toString() {
-        return "exercise=" + exercise +
-                ", session=" + session ;
+        return "{" + exercise + ", " + session + "}";
     }
 }

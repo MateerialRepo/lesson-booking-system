@@ -2,11 +2,18 @@ package com.main;
 
 public class ExerciseCalendar {
     ExerciseDay day;
-    ExerciseAndTime rota;
+    ExerciseSession session;
+    Exercise exercise;
 
-    public ExerciseCalendar(ExerciseDay day, ExerciseAndTime rota) {
+    public ExerciseCalendar(Exercise exercise, ExerciseDay day, ExerciseSession session) {
         this.day = day;
-        this.rota = rota;
+        this.session = session;
+        this.exercise = exercise;
+    }
+
+    public ExerciseCalendar(Exercise exercise, ExerciseSession session) {
+        this.session = session;
+        this.exercise = exercise;
     }
 
     public ExerciseDay getDay() {
@@ -17,17 +24,27 @@ public class ExerciseCalendar {
         this.day = day;
     }
 
-    public ExerciseAndTime getRota() {
-        return rota;
+    public ExerciseSession getSession() {
+        return session;
     }
 
-    public void setRota(ExerciseAndTime rota) {
-        this.rota = rota;
+    public void setSession(ExerciseSession session) {
+        this.session = session;
+    }
+
+    public Exercise getExercise() {
+        return exercise;
+    }
+
+    public void setExercise(Exercise exercise) {
+        this.exercise = exercise;
     }
 
     @Override
     public String toString() {
-        return "day=" + day +
-                ", rota=" + rota;
+        return "{" + day +
+                ", " + session +
+                ", " + exercise +
+                '}';
     }
 }

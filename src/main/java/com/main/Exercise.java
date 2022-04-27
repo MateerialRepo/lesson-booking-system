@@ -7,7 +7,7 @@ public class Exercise {
     private float exercisePrice;
     private List<String> exerciseReviews;
     private List<Integer> exerciseRatings;
-    private int studentAttended = 0;
+    static int studentAttended = 0;
 
 
     public Exercise(String exerciseName, float exercisePrice, List<String> exerciseReviews, List<Integer> exerciseRatings) {
@@ -42,6 +42,10 @@ public class Exercise {
         return studentAttended;
     }
 
+    public void setStudents(int i){
+        studentAttended += i;
+    }
+
 
     //adding and getting Exercise reviews
     public void addExerciseReview(String review) {
@@ -65,10 +69,7 @@ public class Exercise {
 
     @Override
     public String toString() {
-        return "exerciseName='" + exerciseName + '\'' +
-                ", exercisePrice=" + exercisePrice +
-                ", exerciseReviews=" + exerciseReviews +
-                ", exerciseRatings=" + exerciseRatings +
-                ", studentRegistered=" + studentAttended;
+        return  exerciseName + '\'' +
+                ", " + exercisePrice;
     }
 }
